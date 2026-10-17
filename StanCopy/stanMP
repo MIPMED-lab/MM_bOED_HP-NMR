@@ -1,0 +1,1 @@
+If the base stan modification (make/program) does not work, instead of adding $(LINK.cpp) $*.o $(CMDSTAN_MAIN_O) $(LDLIBS) $(LIBSUNDIALS) $(MPI_TARGETS) $(OUTPUT_OPTION), then add: $(LINK.cpp) $(subst \,/,$*.o) $(CMDSTAN_MAIN_O) $(LDLIBS) $(LIBSUNDIALS) $(MPI_TARGETS) $(TBB_TARGETS) $(subst \,/,$(OUTPUT_OPTION)) 
